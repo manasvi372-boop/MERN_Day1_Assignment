@@ -1,7 +1,7 @@
 import { useState } from "react";
 import StudentForm from "./components/StudentForm";
 import StudentList from "./components/StudentList";
-
+import logo from "./mylogo.png";
 function App() {
   const [students, setStudents] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -23,7 +23,8 @@ function App() {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.heading}>🎓 Student Manager</h1>
+      <img src={logo} alt="logo" style={styles.logo} />
+      <h1 style={styles.heading}>Student Manager</h1>
 
       <input
         style={styles.search}
@@ -50,6 +51,10 @@ const styles = {
     background: "#eef2f7",
     minHeight: "100vh",
   },
+   logo: {
+    width: "80px",
+    marginBottom: "10px",
+   },
   heading: {
     marginBottom: "10px",
   },
